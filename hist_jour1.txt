@@ -1,0 +1,1000 @@
+  153  man test
+  154  vi description1.sh 
+  155  ./description1.sh file3 /tmp /etc/passwd 20 file file2
+  156  vi description1.sh 
+  157  ls
+  158  vi numerote_fichiers.sh 
+  159  ./numerote-fichiers.sh 
+  160  vi numerote_fichiers.sh 
+  161  chmod +x numerote_fichiers.sh
+  162  ./numerote_fichiers.sh 
+  163  vi numerote_fichiers.sh 
+  164  ./numerote_fichiers.sh 
+  165  vi numerote_fichiers.sh 
+  166  ./numerote_fichiers.sh 
+  167  vi numerote_fichiers.sh 
+  168  ./numerote_fichiers.sh 
+  169  vi numerote_fichiers.sh 
+  170  vi backup.sh
+  171  chmod +x backup.sh 
+  172  ./backup.sh 
+  173  vi backup.sh
+  174  ./backup.sh . sh
+  175  ls
+  176  vi backup.sh
+  177  pwd
+  178  ./backup.sh /home/formation/scripts sh
+  179  ls
+  180  vi backup.sh
+  181  ./backup.sh /home/formation/scripts sh
+  182  ls
+  183  ls /home/formation/scripts_back 
+  184  cd ..
+  185  ls
+  186  ls scripts_back
+  187  vi backup.sh
+  188  cd scripts
+  189  vi backup.sh
+  190  ./backup.sh  modele.sh   sh
+  191  vi backup.sh
+  192  ./backup.sh  modele.sh   sh
+  193  ./backup.sh  /tmp1   sh
+  194  ./backup.sh  .  sh
+  195  vi backup.sh
+  196  ./backup.sh  .  sh
+  197  vi backup.sh
+  198  var="mot1:mot2:mot"
+  199  echo $var
+  200  var="mot1:mot2:mot3"
+  201  echo ${var}
+  202  echo ${#var}
+  203  echo ${var:4:6}
+  204  echo ${var:5:4}
+  205  echo ${var#*:}
+  206  echo ${var##*:}
+  207  var="mot1:mot2:mot3:mot4:mot5:mot6"
+  208  echo ${var##*:}
+  209  echo ${var#*:}
+  210  echo ${var%*:}
+  211  echo ${var%:*}
+  212  echo ${var%%:*}
+  213  tab=(chaine1 chaine2 chaine3)
+  214  echo ${tab[1]}
+  215  echo ${tab[0]}
+  216  echo ${tab[2]}
+  217  tab[3]=chaine4
+  218  echo ${tab[3]}
+  219  echo $tab[3]
+  220  date
+  221  ls -ld
+  222  set $(ls -ld)
+  223  echo $3
+  224  echo $5
+  225  tail -1  /etc/passwd
+  226  IFS=:
+  227  set $(tail -1  /etc/passwd)
+  228  echo $1
+  229  echo $2
+  230  echo $3
+  231  echo $7
+  232  set $(tail -2  /etc/passwd)
+  233  echo $7
+  234  vi  exist_user.sh 
+  235  ./exist_user.sh 
+  236  vi  exist_user.sh 
+  237  ./exist_user.sh 
+  238  vi  exist_user.sh 
+  239  ./exist_user.sh 
+  240  vi  exist_user.sh 
+  241  ./exist_user.sh 
+  242  vi  exist_user.sh 
+  243  article="Fournitures" ; quantite=5 ; prix=45,2
+  244  printf "\n%-20s***%03d***%+10.2f\n" $article $quantite $prix
+  245  cd
+  246  printf "\n%-20s***%03d***%+10.2f\n" $article $quantite $prix
+  247  article="Fournitures de service" ; quantite=5 ; prix=45,2
+  248  printf "\n%-20s***%03d***%+10.2f\n" $article $quantite $prix
+  249  article="Fournitures de service dans le " ; quantite=5 ; prix=45,2
+  250  printf "\n%-20s***%03d***%+10.2f\n" $article $quantite $prix
+  251  cd scripts
+  252  vi lecture2.sh 
+  253  vi lecture.sh
+  254  chmod +x lecture.sh 
+  255  ./lecture
+  256  ./lecture.sh 
+  257  vi lecture.sh
+  258  ./lecture.sh 
+  259  vi lecture.sh
+  260  ./lecture.sh 
+  261  cat /tmp/outpout 
+  262  vi lecture.sh
+  263  vi lecture2.sh
+  264  ls
+  265  ./lecture.sh 
+  266  cart tel.txt 
+  267  cat tel.txt 
+  268  cat out.txt 
+  269  ./lecture.sh 
+  270  vi lecture.sh
+  271  vi lecture2.sh
+  272  ./lecture2.sh 
+  273  vi lecture2.sh
+  274  nom=christie
+  275  var=nom
+  276  echo $nom
+  277  echo $var
+  278  echo $$var
+  279  eval echo \$$var
+  280  vi eval.sh 
+  281  ./eval.sh arg1 arg2 arg3
+  282  vi eval.sh 
+  283  ./eval.sh arg1 arg2 arg3
+  284  trap  ' rm /tmp/file  '  INT
+  285  echo "test" > /tmp/file
+  286  ll /tmp/file
+  287  vi 
+  288  vi trap.sh
+  289  chmod +x trap.sh 
+  290  ./trap.sh 
+  291  vi trap.sh
+  292  ./trap.sh 
+  293  ll /tmp/file
+  294  vi trap.sh
+  295  cd ../files/
+  296  cd ../scripts
+  297  vi selct.sh
+  298  chmod +x selct.sh 
+  299  ./selct.sh 
+  300  vi selct.sh
+  301  ./selct.sh 
+  302  vi selct.sh
+  303  ./selct.sh 
+  304  vi selct.sh
+  305  ./selct.sh 
+  306  vi getopts.sh 
+  307  ./getopts.sh -a
+  308  ./getopts.sh -b
+  309  ./getopts.sh -b -a
+  310  ./getopts.sh -b -a -c
+  311  ./getopts.sh -ba
+  312  ./getopts.sh a
+  313  vi getopts.sh 
+  314  ./getopts.sh -ba
+  315  ./getopts.sh a
+  316  ./getopts_silencieux.sh 
+  317  ./getopts_silencieux.sh a
+  318  ./getopts_silencieux.sh -a
+  319  ./getopts_silencieux.sh -b
+  320  ./getopts_silencieux.sh -b 
+  321  ./getopts_silencieux.sh -b a
+  322  vi proc2
+  323  vi proc3 
+  324  vi proc2.sh
+  325  chmod +x proc2.sh 
+  326  ./proc2.sh -i 100 -j
+  327  vi proc2.sh
+  328  ./proc2.sh -i 100 -j
+  329  ./proc2.sh -i  -j
+  330  ./proc2.sh -i 
+  331  vi getopts_silencieux.sh 
+  332  ./getopts_silencieux.sh -c
+  333  echo $?
+  334  vi getopts_silencieux.sh 
+  335  echo $?
+  336  ./getopts_silencieux.sh -c
+  337  vi getopts_silencieux.sh 
+  338  vi proc3 
+  339  ./proc -i 100 -j
+  340  ./proc3 -i 100 -j
+  341  ./proc3 -i 100 -j -c
+  342  ./proc3 -i  -j -c
+  343  vi nombres.sh
+  344  vi numbers
+  345  chmod +x nombres.sh 
+  346  ./nombres.sh numbers 
+  347  vi numbers
+  348  vi nombres.sh
+  349  ./nombres.sh numbers 
+  350  vi nombres.sh
+  351  vi numbers
+  352  ./nombres.sh numbers 
+  353  vi numbers
+  354  vi nombres.sh
+  355  ./nombres.sh numbers 
+  356  vi nombres.sh
+  357  ./nombres.sh numbers 
+  358  vi nombres.sh
+  359  vi numbers 
+  360  ./nombres.sh numbers 
+  361  vi numbers 
+  362  vi nombres.sh
+  363  ls
+  364  id
+  365  ll /tmp/file
+  366  cd files/
+  367  ls chambresHotes.csv 
+  368  cat chambresHotes.csv 
+  369  man sed
+  370  cat chambresHotes.csv  | sed -r ''
+  371  cat chambresHotes.csv  | sed -r -n ''
+  372  cat chambresHotes.csv  | sed -r '4,7d'
+  373  cat chambresHotes.csv  | sed -n -r '4,7p'
+  374  cat chambresHotes.csv  | sed -r '/Arnac/d'
+  375  cat chambresHotes.csv  | sed -n -r '/Arnac/p' 
+  376  cat chambresHotes.csv  | sed -r 's/VRAI/True/'
+  377  cat chambresHotes.csv  | sed -r 's/VRAI/True/g'
+  378  cat chambresHotes.csv  | sed -r 's/vrai/True/g'
+  379  cat chambresHotes.csv  | sed -r 's/vrai/True/gi'
+  380  cat chambresHotes.csv  | sed -r 's/VRAI//g'
+  381  cat chambresHotes.csv  | sed -r '4,8 s/VRAI/True/g'
+  382  cat chambresHotes.csv  | sed -r '3,+5 s/VRAI/True/g'
+  383  cat chambresHotes.csv  | sed -r 's/[:space:]+//g'
+  384  cat chambresHotes.csv  | sed -r '3,+5 s/VRAI/True/g'
+  385  cat chambresHotes.csv  | sed -r 's/[:space:]+/\t/g'
+  386  cat chambresHotes.csv  | sed -r 's/(VRAI|FAUX)/mot/g'
+  387  cat chambresHotes.csv  | sed -r 's/(VRAI|FAUX)/nb:\1/g'
+  388  cat chambresHotes.csv  | sed -r 's/(VRAI|FAUX)/nb:\1_2/g'
+  389  awk '{print $0}' files
+  390  ls -l
+  391  ls -l > files
+  392  awk '{print $0}' files
+  393  awk '{print $1 "\t" $9}' files
+  394  awk -F";" '{print $1,$4,$5}' chambresHotes.csv
+  395  echo "Bonjour Classe" | awk '{$1="Hello"; print $0}'
+  396  awk '$2=1 {print $0}' files
+  397  cat files
+  398  ls -l ~
+  399  ls -l ~ > files
+  400  awk '$2=1 {print $0}' files
+  401  awk '$2==1 {print $0}' files
+  402  awk '$2==6 {print $0}' files
+  403  awk '/janv/{print $0}' files
+  404  awk '/juil/{print $0}' files
+  405  awk 'BEGIN {OFS=":"} {print $1,$2}' files
+  406  awk '{print NF}' files
+  407  awk '{print NR}' files
+  408  awk 'END {print NR}' files
+  409  echo 1 2 | awk '{print $1 + $2}'
+  410  ps -ef | awk '{print $1,$8}'
+  411  ps -ef | awk '{print "Utilisateur : $1 \t CMD: $8"}'
+  412  ps -ef | awk '{print "Utilisateur : " $1 \t CMD: $8}'
+  413  ps -ef | awk '{print "Utilisateur : " $1 "\t" CMD: $8}'
+  414  ps -ef | awk '{print "Utilisateur : " $1 "\t CMD:" $8}'
+  415  awk -F'|' '{print "Le uméro de ligne : " NR "\t Client: " $1}' adresse.txt
+  416  awk -F'|' '/[/]/ {print $0}' adresse.txt
+  417  awk -F'|' '$3 ~ /^56/ {print }' adresse.txt
+  418  awk -F'|' '$3 !~ /^56/ {print }' adresse.txt
+  419  awk -F'|' 'NR == 1 || NR == 4 {print $1, "-" , $5}' adresse.txt
+  420  vi adresse.txt 
+  421  awk -F'|' 'NR == 1 , NR == 4 {print $1, "-" , $5}' adresse.txt
+  422  vi adresse.txt 
+  423  awk -F'|' 'NR == 1 , NR == 4 {print $1, "-" , $5}' adresse.txt
+  424  cd
+  425  cd scripts
+  426  ls
+  427  cd ..
+  428  cd files/
+  429  ls *@(866)*
+  430  ls *?(866)*
+  431  ls *866*
+  432  cd ..
+  433  cd scripts
+  434  ls
+  435  vi audit.sh
+  436  chmod +x audit.sh 
+  437  ./audit.sh 
+  438  vi audit.sh
+  439  ./audit.sh 
+  440  vi audit.sh
+  441  ./audit.sh 
+  442  vi audit.sh
+  443  ./audit.sh 
+  444  vi audit.sh
+  445  ./audit.sh 
+  446  vi audit.sh
+  447  ./audit.sh 
+  448  vi audit.sh
+  449  ./audit.sh 
+  450  vi audit.sh
+  451  ls
+  452  vi ajoutPersonne.sh
+  453  chmod +x ajoutPersonne.sh 
+  454  ./ajoutPersonne.sh 
+  455  vi ajoutPersonne.sh
+  456  ./ajoutPersonne.sh 
+  457  vi ajoutPersonne.sh
+  458  ./ajoutPersonne.sh 
+  459  vi ajoutPersonne.sh
+  460  ./ajoutPersonne.sh 
+  461  vi ajoutPersonne.sh
+  462  ./ajoutPersonne.sh [A
+  463  ./ajoutPersonne.sh 
+  464  vi ajoutPersonne.sh
+  465  ./ajoutPersonne.sh 
+  466  vi ajoutPersonne.sh
+  467  ./ajoutPersonne.sh 
+  468  vi ajoutPersonne.sh
+  469  ./ajoutPersonne.sh 
+  470  vi ajoutPersonne.sh
+  471  ./ajoutPersonne.sh 
+  472  vi ajoutPersonne.sh
+  473  ./ajoutPersonne.sh 
+  474  cat Personnes 
+  475  ./ajoutPersonne.sh 
+  476  cat Personnes 
+  477  vi ajoutPersonne.sh
+  478  ./ajoutPersonne.sh 
+  479  vi ajoutPersonne.sh
+  480  ./ajoutPersonne.sh 
+  481  vi ajoutPersonne.sh
+  482  ./ajoutPersonne.sh 
+  483  . ./ajoutPersonne.sh 
+  484  cd scripts
+  485  vi ajoutPersonne.sh
+  486  . ./ajoutPersonne.sh 
+  487  ./ajoutPersonne.sh 
+  488  vi ajoutPersonne.sh
+  489  set -o xtrace
+  490  ./ajoutPersonne.sh 
+  491  vi ajoutPersonne.sh
+  492  ./ajoutPersonne.sh 
+  493  vi ajoutPersonne.sh
+  494  set +o xtrace
+  495  cd
+  496  ls
+  497  cd scripts
+  498  vi actions_fichiers.sh
+  499  chmod +x actions_fichiers.sh 
+  500  ./actions_fichiers.sh 
+  501  vi actions_fichiers.sh
+  502  mkdir test
+  503  cp actions_fichiers.sh test
+  504  ls
+  505  cp -r tel.txt modele.sh_back ex6.sh 20 test
+  506  cd test/
+  507  vi actions_fichiers.sh 
+  508  ./actions_fichiers.sh 
+  509  vi actions_fichiers.sh 
+  510  ./actions_fichiers.sh 
+  511  vi actions_fichiers.sh 
+  512  ./actions_fichiers.sh 
+  513  vi actions_fichiers.sh 
+  514  ./actions_fichiers.sh 
+  515  vi actions_fichiers.sh 
+  516  ./actions_fichiers.sh 
+  517  vi actions_fichiers.sh 
+  518  ./actions_fichiers.sh 
+  519  vi actions_fichiers.sh 
+  520  ./actions_fichiers.sh 
+  521  vi actions_fichiers.sh 
+  522  ./actions_fichiers.sh 
+  523  vi actions_fichiers.sh 
+  524  ./actions_fichiers.sh 
+  525  vi actions_fichiers.sh 
+  526  ./actions_fichiers.sh 
+  527  vi actions_fichiers.sh 
+  528  ./actions_fichiers.sh 
+  529  vi actions_fichiers.sh 
+  530  ./actions_fichiers.sh 
+  531  vi actions_fichiers.sh 
+  532  ./actions_fichiers.sh 
+  533  vi actions_fichiers.sh 
+  534  ./actions_fichiers.sh 
+  535  vi actions_fichiers.sh 
+  536  ./actions_fichiers.sh 
+  537  vi actions_fichiers.sh 
+  538  ./actions_fichiers.sh 
+  539  vi actions_fichiers.sh 
+  540  ./actions_fichiers.sh 
+  541  vi actions_fichiers.sh 
+  542  ./actions_fichiers.sh 
+  543  vi actions_fichiers.sh 
+  544  cd ..
+  545  cd files/
+  546  ls
+  547  cat tel.txt 
+  548  cp tel.txt tel2.txt
+  549  vi tel2.txt 
+  550  grep Karama tel2.txt 
+  551  cat tel2.txt 
+  552  grep Karama tel2.txt 
+  553  grep -i Karama tel2.txt 
+  554  grep  "^Karama" tel2.txt 
+  555  grep  "Karama$" tel2.txt 
+  556  grep  "[Karama]$" tel2.txt 
+  557  grep  [Karama]$ tel2.txt 
+  558  vi tel2.txt 
+  559  gerp "^[A-Z][5-9].$"
+  560  grep "^[A-Z][5-9].$" tel2.txt
+  561  cat tel2.txt 
+  562  vi tel2.txt 
+  563  grep "^$" tel2.txt
+  564  grep -n "^$" tel2.txt
+  565  grep -n "^[ ]$" tel2.txt
+  566  grep -n "^[<space>]*$" tel2.txt
+  567  grep -n "^[[:space:]]*$" tel2.txt
+  568  grep ".\{3\}" tel2.txt
+  569  grep "^.\{3\}$" tel2.txt
+  570  grep -n "^.\{3\}$" tel2.txt
+  571  grep -n "^.\{3,4\}$" tel2.txt
+  572  grep -n -E  "^.\{3,4\}$" tel2.txt
+  573  grep -n -E  "^.{3,4}$" tel2.txt
+  574  vi tel2.txt 
+  575  cat tel2.txt | grep -E "[0-9]{5}"
+  576  cat tel2.txt | grep -E "|[0-9]{5}|"
+  577  cat tel2.txt | grep -E "\|[0-9]{5}\|"
+  578  vi tel2.txt 
+  579  cat tel2.txt | grep -E "\|[0-9]{5}\|"
+  580  vi tel2.txt 
+  581  cat tel2.txt | grep -E "\|\+?[0-9]{5}\|"
+  582  cat tel2.txt | grep -E "\|[0-9]{5}\|"
+  583  vi tel2.txt 
+  584  cat tel2.txt | grep -E "\|\+?[0-9]{5}\|"
+  585  cat chifres.txt 
+  586  mv chifres.txt chiffres.txt 
+  587  cat chiffres.txt | grep -E 1
+  588  cat chiffres.txt | grep -E 11
+  589  cat chiffres.txt | grep -E 111
+  590  cat chiffres.txt | grep -E ^11
+  591  cat chiffres.txt | grep -E zz$
+  592  cat chiffres.txt | grep -E ^zz$
+  593  cat chiffres.txt | grep -E ^1?$
+  594  cat chiffres.txt | grep -E ^1*$
+  595  cat chiffres.txt | grep -E ^1+$
+  596  cat chiffres.txt | grep -E ^1*$
+  597  cat chiffres.txt | grep -E ^11*$
+  598  cat chiffres.txt | grep -E ^11+$
+  599  cat chiffres.txt | grep -E ^(11)+$
+  600  cat chiffres.txt | grep -E "^(11)+$"
+  601  cat chiffres.txt | grep -E "^\(11\)+$"
+  602  cat chiffres.txt | grep -E "^(11)+$"
+  603  cat chiffres.txt | grep -E "^1{3,7}$"
+  604  vi chiffres.txt 
+  605  cat chiffres.txt | grep -E "1{3,7}"
+  606  cat chiffres.txt | grep -E "^1{3,7}$"
+  607  cat chiffres.txt | grep -E "(11|zz)"
+  608  cat chiffres.txt | grep -E "^(11|zz)$"
+  609  cat chiffres.txt | grep -E "^[1z]"
+  610  cat chiffres.txt | grep -E "^(1|z)$"
+  611  cat chiffres.txt | grep -E "^[1z]$"
+  612  cat chiffres.txt | grep -E "^[1z]+$"
+  613  cat chiffres.txt | grep -E "[[:space:]]"
+  614  cat chiffres.txt | grep -E "[[:space:]]+"
+  615  vi chiffres.txt 
+  616  cat chiffres.txt | grep -E "[[:space:]]+"
+  617  cat chiffres.txt | grep -E "[[:space:]]*"
+  618  cat chiffres.txt | grep -E "^[1z]"
+  619  cat chiffres.txt | grep -E "^[^1z]"
+  620  man grep
+  621  vi expr.sh
+  622  cat mails.txt 
+  623  chmod +x expr.sh 
+  624  ./expr.sh mails.txt 
+  625  vi expr.sh
+  626  cat chambresHotes.csv 
+  627  man sed
+  628  cat chambresHotes.csv | sed -r ''
+  629  man sed
+  630  cat chambresHotes.csv | sed -r -n ''
+  631  cat chambresHotes.csv | sed -r '4,7d'
+  632  cat chambresHotes.csv | sed -r '4,7p'
+  633  cat chambresHotes.csv | sed -r -n '4,7p'
+  634  cat chambresHotes.csv | sed -r -n '/Arnac/p'
+  635  cat chambresHotes.csv | sed -r -n '/Arnac/d'
+  636  cat chambresHotes.csv | sed -r '/Arnac/d'
+  637  man sed
+  638  cat chambresHotes.csv | sed -r 's/FAUX/False/'
+  639  cat chambresHotes.csv | sed -r 's/FAUX/False/g'
+  640  cat chambresHotes.csv | sed -r 's/FAUX//g'
+  641  cat chambresHotes.csv | sed -r 's/FAUX/False/'
+  642  cat chambresHotes.csv | sed -r 's/FAUX/False/g'
+  643  vi chambresHotes.csv 
+  644  cat chambresHotes.csv | sed -r 's/FAUX/False/g'
+  645  cat chambresHotes.csv | sed -r 's/FAUX/False/gi'
+  646  cat chambresHotes.csv | sed -r '5s/FAUX/False/gi'
+  647  cat chambresHotes.csv | sed -r '5,10s/FAUX/False/gi'
+  648  cat chambresHotes.csv | sed -r '5,+3s/FAUX/False/gi'
+  649  cat chambresHotes.csv | sed -r '5, s/FAUX/False/gi'
+  650  cat chambresHotes.csv | sed -r '5,$ s/FAUX/False/gi'
+  651  cat chambresHotes.csv | sed -r 's/;/|/gi'
+  652  cat chambresHotes.csv | sed -r "s/;/|/gi"
+  653  cat chambresHotes.csv | sed -r s/;/|/gi
+  654  cat chambresHotes.csv | sed -r '5,+3s/(FAUX|VRAI)//gi'
+  655  cat chambresHotes.csv | sed -r 's/(FAUX|VRAI)//gi'
+  656  cat chambresHotes.csv | sed -r -n '5,+3p'
+  657  cat chambresHotes.csv | sed -r '5,$ s/FAUX/\1_copie/gi'
+  658  cat chambresHotes.csv | sed -r 's/FAUX/\1_copie/'   
+  659  cat chambresHotes.csv | sed -r 's/(FAUX)/\1_copie/'   
+  660  cat chambresHotes.csv | sed -r '2,4s/(FAUX)/\1_copie/'  | head -4 
+  661  cat chambresHotes.csv | sed -r '2,4s/(FAUX)/\1_copie/g'  | head -4 
+  662  vi dates_cours.txt
+  663  cat dates_cours.txt | sed -r '^[0-9]'
+  664  cat dates_cours.txt | sed -r '/^[0-9]/'
+  665  cat dates_cours.txt | sed -r '/^[0-9]/p'
+  666  cat dates_cours.txt | sed -r -n '/^[0-9]/p'
+  667  cat dates_cours.txt | sed -r  's/^[0-9].*$/<date>\1</date>/'
+  668  cat dates_cours.txt | sed -r  's/^[0-9].*$/<date>\1<\/date>/'
+  669  cat dates_cours.txt | sed -r  's/^([0-9].*)$/<date>\1<\/date>/'
+  670  cat dates_cours.txt | sed -r  's/^[0-9].*$/<date>&<\/date>/'
+  671  ls
+  672  cat passwd 
+  673  cat passwd | sed 's/bash/csh/'
+  674  cat passwd | sed 's/bash/csh/g'
+  675  cat passwd | sed -r 's/bash/csh/g'
+  676  cat passwd | sed -r 's/bash/csh/g' > passwd_2
+  677  cat passwd_2 
+  678  man sed
+  679  cat passwd | sed -r 's/bash/csh/w passwd_2'
+  680  rm passwd_2 
+  681  cat passwd | sed -r 's/bash/csh/w passwd_2'
+  682  cat passwd_2 
+  683  cat passwd | sed -r -n 's/bash/csh/w passwd_2'
+  684  cat passwd_2 
+  685  cat passwd | sed -r '10,$ s/bash/csh/g'
+  686  cat linux.txt 
+  687  cat linux.txt | sed 's/unix/linux/g'
+  688  cat linux.txt | sed 's/unix/linux/3g'
+  689  cat linux.txt 
+  690  vi linux.txt 
+  691  cat linux.txt | sed 's/unix/linux/3g'
+  692  cat linux.txt 
+  693  cat linux.txt | sed 's/unix/linux/3g'
+  694  cat linux.txt 
+  695  cat linux.txt | sed 's/unix/linux/3g'
+  696  cat linux.txt | sed 's/unix/linux/g'
+  697  sed 's/unix/linux/3g' linux.txt 
+  698  man sed
+  699  cat linux.txt | sed 's/unix/linux/g3'
+  700  cat linux.txt | sed 's/unix/linux/g'
+  701  cat linux.txt | sed 's/^(.)/(\1)/'
+  702  cat linux.txt | sed -r 's/^(.)/(\1)/'
+  703  cat linux.txt | sed 's/^\(.\)/\(\1\)/g'
+  704  cat dates_cours.txt | sed -r -n '/^[0-9]/p'
+  705  cat dates_cours.txt | sed -r -n 's/^[0-9].*$/<date>&<\/date>/'
+  706  cat dates_cours.txt | sed -r  's/^[0-9].*$/<date>&<\/date>/'
+  707  sed 's/unix/linux/3g' linux.txt 
+  708  sed 's/unix/linux/3' linux.txt 
+  709  sed 's/unix/linux/2' linux.txt 
+  710  clear
+  711  cal files
+  712  cat files
+  713  awk 'print $0' files
+  714  awk '{print $0}' files
+  715  awk '{print $1}' files
+  716  awk '{print $9}' files
+  717  awk '{print $NF}' files
+  718  awk '{print $1 $9}' files
+  719  awk '{print $1,$9}' files
+  720  awk '{print $1,$6,$9}' files
+  721  awk '{print "$1-$6-$9"}' files
+  722  awk '{print $1 "-" $6 "-" $9}' files
+  723  awk '{print $1 ":" $6 "-" $9}' files
+  724  awk '{print $1 ":" $6 ":" $9}' files
+  725  awk '{print $1 ":" $6 " : " $9}' files
+  726  awk '{print $1 ":" $6 "\t: " $9}' files
+  727  awk '{print $1 ":" $6 "\t\t: " $9}' files
+  728  cat chambresHotes.csv 
+  729  awk -F ";" '{print $1 ":" $6 "\t\t: " $9}' 
+  730  awk -F ";" '{print $1 ":" $6 "\t\t: " $9}' chambresHotes.csv 
+  731  awk -F ";" '{print $1 ":" $2 "\t\t: " $4}' chambresHotes.csv 
+  732  awk -F ";" '{print $1 ":" $2 ": " $4}' chambresHotes.csv 
+  733  echo "Bonjour la classe" | awk '{ $1="Hello" ; print $0  }'
+  734  cat chambresHotes.csv | awk -F ";" '{ $1="x" ; print $0  }'
+  735  cat files 
+  736  awk '/nov/{print $0}'
+  737  awk '/nov/{print $0}' files 
+  738  awk '$2 == 4 {print $0}' files 
+  739  awk '$2 == 6 {print $0}' files 
+  740  awk '  NR == 5   {print $0}' files 
+  741  awk '  NR == 5 , NR==10  {print $0}' files 
+  742  cat adresse
+  743  cat adresse.txt 
+  744  awk $3 == 56100 {print }
+  745  awk '$3 == 56100 {print }' adresse.txt 
+  746  awk '$3 == 56100 {print $0}' adresse.txt 
+  747  awk '$3 ~ 56100 {print $0}' adresse.txt 
+  748  awk '$3 ~ /56100/ {print $0}' adresse.txt 
+  749  awk  -F "|"   '$3 ~ /56100/ {print $0}' adresse.txt 
+  750  awk  -F "|"   '$3 == 56100 {print $0}' adresse.txt 
+  751  awk  -F "|"   '$3 ~ /^56/ {print $0}' adresse.txt 
+  752  vi adresse.txt 
+  753  awk  -F "|"   '$3 ~ /^56/ {print $0}' adresse.txt 
+  754  awk  -F "|"   '$3 !~ /^56/ {print $0}' adresse.txt 
+  755  awk  -F "|"   '$3 ~ /100$/ {print $0}' adresse.txt 
+  756  file /etc
+  757  file /etc/passwd
+  758  file /etc/*
+  759  file /etc/* | grep text
+  760  file /etc/* | grep text | awk '{ print $0}'
+  761  file /etc/* | grep text | awk '{ print $1}'
+  762  file /etc/* | grep text | awk '{ print $1}' | sed 's/:$//'
+  763  file /etc/* 
+  764  file /etc/* | grep text 
+  765  file /etc/* | grep text | awk '{ print $1}' 
+  766  file /etc/* | grep text | awk '{ print $1}' | sed 's/:$//'
+  767  ls -l
+  768  ls -la ~ | awk ''
+  769  ls -la ~ 
+  770  ls -la ~ | awk '{print $0}'
+  771  ls -la ~ | awk ' $9 ~  /^\./   {print $0}'
+  772  ls -la ~ | awk ' $9 ~  /^\.[^.]/   {print $0}'
+  773  ps -aef
+  774  ps -aef | head -8
+  775  ps -aef | awk ' NR=1 , NR=8  {print}'
+  776  ps -aef | awk ' NR==1 , NR==8  {print}'
+  777  ps -aef | awk ' {print $1,$8}'
+  778  ps -aef | awk ' {print $1 $8}'
+  779  ps -aef | awk ' {print $1,$8}'
+  780  ps -aef | awk ' {print $1 " --- "  $8}'
+  781  ps -aef | awk ' {print "Utilisateur :" $1 " CMD : "  $8}'
+  782  awk -F "|" '{  print "Le numéro de ligne : " NR "\tClient : " $1 }' adresse.txt 
+  783  cat adresse.txt 
+  784  awk -F "|" '/[/]/   {print $0}' adresse.txt 
+  785  awk -F "|" ' $3 ~ /^56/ {print} '
+  786  awk -F "|" ' $3 ~ /^56/ {print} ' adresse.txt 
+  787  awk -F "|" ' $3 !~ /^56/ {print} ' adresse.txt 
+  788  awk -F "|" ' NR == 1 || NR ==4  {print $1 " - " $5}
+  789  awk -F "|" ' NR == 1 || NR ==4  {print $1 " - " $5}' adresse.txt 
+  790  awk -F "|" ' NR == 1 , NR ==4  {print $1 " - " $5}' adresse.txt 
+  791  awk -F "|" ' NR == 1 && NR ==4  {print $1 " - " $5}' adresse.txt 
+  792  awk -F "|" ' $3 ~ /^56/ && $5 ~ /^78/  {print $1 " - " $5}' adresse.txt 
+  793  cat adresse.txt 
+  794  awk -F "|" ' $3 ~ /^56/ && $5 ~ /^85/  {print $1 " - " $5}' adresse.txt 
+  795  vi script1.awk
+  796  awk -f script1.awk adresse.txt 
+  797  vi script1.awk
+  798  awk -f script1.awk adresse.txt 
+  799  vi script1.awk
+  800  awk -f script1.awk adresse.txt 
+  801  vi script1.awk
+  802  awk -f script1.awk adresse.txt 
+  803  vi adresse.txt 
+  804  awk -f script1.awk adresse.txt 
+  805  vi adresse.txt 
+  806  awk -f script1.awk adresse.txt 
+  807  vi script2.awk 
+  808  awk -f script2.awk adresse.txt 
+  809  vi script2.awk 
+  810  awk -f script2.awk adresse.txt 
+  811  vi script3.awk
+  812  awk -f script3.awk adresse.txt 
+  813  wc -l  adresse.txt 
+  814  vi script3.awk
+  815  wc -l  adresse.txt 
+  816  awk -f script3.awk adresse.txt 
+  817  man awk
+  818  awk -f script3.awk
+  819  ls
+  820  tail -f
+  821  tail -l
+  822  ls -l
+  823  ls -l | sort +8 -9
+  824  ls -l | sort +8 -9 +4n -5
+  825  ls -l | sort  +4n -5
+  826  man sort
+  827  ls -l | sort  +4nr -5
+  828  cut -d: -f1,3 /etc/passwd
+  829  read -p "Donnez des valeurs "
+  830  read -p "Donnez des valeurs " a b c
+  831  echo $a
+  832  echo $b
+  833  echo $c
+  834  IFS="-"
+  835  read -p "Donnez des valeurs " a b c
+  836  echo $c
+  837  echo $a
+  838  read -p "Donnez des valeurs " a b c
+  839  echo $a
+  840  du -h
+  841  du -hs
+  842  du -hs /etc
+  843  du -hs /home/formation/
+  844  du -h /home/formation/
+  845  du -h 
+  846  du -hs /tmp
+  847  du -hs rep22
+  848  mail=med@gmail.com
+  849  expr "$mail" : '[a-zA-Z].*@[a-zA-Z].*\.[a-zA-Z]\{2,\4}'
+  850  expr "$mail" : '[a-zA-Z].*@[a-zA-Z].*\.[a-zA-Z]\{2,4\}'
+  851  mail=med.gmail
+  852  expr "$mail" : '[a-zA-Z].*@[a-zA-Z].*\.[a-zA-Z]\{2,4\}'
+  853  cd scripts
+  854  ls
+  855  vi clients.csv
+  856  vi agences.csv
+  857  vi clients.csv
+  858  vi bd.sh 
+  859  chmod +x bd.sh 
+  860  ./bd.sh 
+  861  vi bd.sh 
+  862  ./bd.sh 
+  863  vi bd.sh 
+  864  ./bd.sh 
+  865  vi bd.sh 
+  866  ./bd.sh 
+  867  vi bd.sh 
+  868  ./bd.sh 
+  869  vi bd.sh 
+  870  ./bd.sh 
+  871  vi bd.sh 
+  872  ./bd.sh 
+  873  vi bd.sh 
+  874  car erreurs_ajout.log 
+  875  vi bd.sh 
+  876  car erreurs_ajout.log 
+  877  cat erreurs_ajout.log 
+  878  vi bd.sh 
+  879  ./bd.sh 
+  880  cat erreurs_ajout.log 
+  881  vi erreurs_ajout.log 
+  882  cat erreurs_ajout.log 
+  883  ./bd.sh 
+  884  cat erreurs_ajout.log 
+  885  vi erreurs_ajout.log 
+  886  vi bd.sh 
+  887  date "+%M"
+  888  date "+%d"
+  889  date "+%d/%m/%y"
+  890  date "+%d/%m/%Y"
+  891  date "+%d/%m/%Y à "
+  892  date "+%d/%m/%Y à %H:%M"
+  893  vi bd.sh 
+  894  ./bd.sh 
+  895  vi bd.sh 
+  896  ./bd.sh 
+  897  vi bd.sh 
+  898  ./bd.sh 
+  899  cat source.sql 
+  900  ./bd.sh 
+  901  cat source.sql 
+  902  vi bd.sh 
+  903  cat source.sql 
+  904  ./bd.sh 
+  905  cat source.sql 
+  906  vi bd.sh 
+  907  ./bd.sh 
+  908  cat source.sql 
+  909  ./bd.sh 
+  910  vi bd.sh 
+  911  vi init_session.sh
+  912  chmod +x init_session.sh 
+  913  ./init_session.sh 
+  914  ./init_session.sh formation
+  915  ./init_session.sh formation1
+  916  vi init_session.sh
+  917  chmod +x init_session.sh 
+  918  ./init_session.sh user1 https://github.com/medsalahmeddeb/AppWebJava AppWebJava
+  919  sudo ./init_session.sh user1 https://github.com/medsalahmeddeb/AppWebJava AppWebJava
+  920  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  921  ls
+  922  ls AppWebJava/
+  923  vi init_session.sh
+  924  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  925  ls /home
+  926  vi init_session.sh
+  927  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  928   /home/user1/
+  929  vi init_session.sh
+  930  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  931  cat /home/user1/.bashrc
+  932  sudo cat /home/user1/.bashrc
+  933  vi init_session.sh
+  934  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  935  sudo cat /home/user1/.bashrc
+  936  vi init_session.sh
+  937  sudo ls -a /home/user1/
+  938  sudo ls -a /home/user1/.bashrc
+  939  sudo cat /home/user1/.bashrc
+  940  vi init_session.sh
+  941  man userdel 
+  942  userdel -r user1
+  943  sudo userdel -r user1
+  944  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  945  ls
+  946  ls /home/user1/
+  947  sudo ls -l /home/user1/
+  948  sudo ls -la /home/user1/
+  949  sudo cat /home/user1/.bashrc
+  950  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  951  sudo cat /home/user1/.bashrc
+  952  sudo ls -la /home/user1/
+  953  vi init_session.sh
+  954  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  955  vi init_session.sh
+  956  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  957  vi init_session.sh
+  958  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 1
+  959  vi init_session.sh
+  960  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  961  man yum
+  962  vi init_session.sh
+  963  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  964  vi init_session.sh
+  965  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  966  vi init_session.sh
+  967  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  968  sudo ./init_session.sh user2 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  969  vi init_session.sh
+  970  sudo ./init_session.sh user2 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  971  vi init_session.sh
+  972  pwd
+  973  cd files/
+  974  vi adresse.txt 
+  975  git
+  976  echo $?
+  977  sudo yum remove git
+  978  git
+  979  echo $?
+  980  sudo yum remove git
+  981  ifconfig 
+  982  sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+  983  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+  984  sudo yum install docker-ce
+  985  sudo systemctl start docker
+  986  sudo systemctl status docker
+  987  sudo systemctl enable docker
+  988  docker info
+  989  sudo docker info
+  990  sudo systemctl status docker
+  991  sudo docker info
+  992  top
+  993  sudo docker info
+  994  docker run hello-world
+  995  sudo docker run hello-world
+  996  history 
+  997  vi /etc/group
+  998  usermod -aG formation docker
+  999  usermod -aG docker formation 
+ 1000  sudo usermod -aG docker formation 
+ 1001  docker info
+ 1002  docker search ubuntu
+ 1003  docker search jenkins
+ 1004  docker info
+ 1005  docker pull nginx
+ 1006  docker pull nginx:1.14.0
+ 1007  docker search jenkins
+ 1008  docker images 
+ 1009  docker pull --all-tags nginx
+ 1010  ls /var/lib/docker/
+ 1011  sudo ls /var/lib/docker
+ 1012  sudo ls /var/lib/docker/image$
+ 1013  sudo ls /var/lib/docker/image
+ 1014  sudo ls /var/lib/docker/image/overlay2
+ 1015  sudo ls /var/lib/docker/image/overlay2/imagedb
+ 1016  docker images$
+ 1017  docker images
+ 1018  sudo ls /var/lib/docker/image/overlay2/imagedb
+ 1019  sudo ls /var/lib/docker/image/overlay2/imagedb/content
+ 1020  sudo ls /var/lib/docker/image/overlay2/imagedb/content/sha*
+ 1021  sudo ls /var/lib/docker/image/overlay2/imagedb/content/sha256
+ 1022  sudo ls /var/lib/docker/image/overlay2/imagedb/content/sha256/ecc98fc2f376d6560311b66d6958e4350a5a485ee07aa2d1235842d0bce440da
+ 1023  sudo ls -l /var/lib/docker/image/overlay2/imagedb/content/sha256/ecc98fc2f376d6560311b66d6958e4350a5a485ee07aa2d1235842d0bce440da
+ 1024  docker images
+ 1025  docker images --filter "before=nginx"
+ 1026  docker images --filter "before=hello-world"
+ 1027  docker images
+ 1028  docker run nginx
+ 1029  docker ps -a
+ 1030  docker run   -i -t   centos:7 
+ 1031  docker run   -i -t   centos:7
+ 1032  docker ps
+ 1033  docker ps -a 
+ 1034  docker run   -i -t   centos:7
+ 1035  docker run -d centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+ 1036  docker ps
+ 1037  docker logs 45b7abe9005d
+ 1038  docker logs -f  45b7abe9005d
+ 1039  docker logs -f -t 45b7abe9005d
+ 1040  docker ps
+ 1041  docker stop cool_jemison
+ 1042  docker ps
+ 1043  docker ps -a
+ 1044  docker run -d centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+ 1045  docker ps
+ 1046  docker ps -q
+ 1047  docker stop 8be43e9d93e1 34470d345518 ed7504914d51
+ 1048  docker run -d centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+ 1049  docker ps -q
+ 1050  docker stop $(docker ps -q)
+ 1051  history 
+ 1052  docker ps -a
+ 1053  docker rm 038f95266fe9
+ 1054  docker run -d centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+ 1055  docker ps 
+ 1056  docker rm 3e58281e0005
+ 1057  docker rm -f 3e58281e0005
+ 1058  docker rm $(docker ps -aq)
+ 1059  docker ps -a
+ 1060  cd /var/lib/docker/
+ 1061  ls
+ 1062  sudo ls
+ 1063  sudo ls containers
+ 1064  docker run -d     --restart=always     centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+ 1065  docker run -d        centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+ 1066  docker ps
+ 1067  sudo systemctl restart docker.service 
+ 1068  docker ps
+ 1069  docker ps -a
+ 1070  docker rm -f 5d619ae13380 9d718734e117
+ 1071  docker run -d --name c1 centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+ 1072  docker run -d --name c2 centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+ 1073  docker ps
+ 1074  sudo systemctl restart docker.service 
+ 1075  docker ps
+ 1076  docker ps -a
+ 1077  docker run -d --name c3  --restart=always  centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+ 1078  docker ps -a
+ 1079  sudo systemctl restart docker.service 
+ 1080  docker ps -a
+ 1081  docker stop c3
+ 1082  docker ps -a
+ 1083  docker run -d ngix
+ 1084  docker run -d nginx
+ 1085  docker ps
+ 1086  docker inspect a40a0fdba185
+ 1087  firefox &
+ 1088  docker ps
+ 1089  docker exec -it a40a0fdba185 bash
+ 1090  docker ps
+ 1091  docker top c1
+ 1092  docker top a40a0fdba185
+ 1093  docker run -d --name c4 centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+ 1094* docker top 
+ 1095  docker run -d --name c5 centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 > /file; sleep 1 ; done" 
+ 1096  docker stats 
+ 1097  docker inspect c5
+ 1098  cd
+ 1099  docker container run alpine echo hello
+ 1100  $
+ 1101  docker ps
+ 1102  docker ps -a
+ 1103  docker run alpine 
+ 1104  docker ps -a
+ 1105  docker images
+ 1106  docker run -it alpine sh
+ 1107  docker run -it --name=test1 alpine:latest date
+ 1108  docker run -it --name=test2 alpine:latest date
+ 1109  docker run -it --name=test1   --rm    alpine:latest date
+ 1110  docker run -it --name=test3   --rm    alpine:latest date
+ 1111  docker ps -a
+ 1112  docker run -it --name=test3   --rm    alpine:latest date
+ 1113  docker run -it alpine
+ 1114  docker run alpine ping 8.8.8.8
+ 1115  docker run -ti alpine ping 8.8.8.8
+ 1116  docker ps
+ 1117  docker run -d alpine ping 8.8.8.8
+ 1118  docker ps
+ 1119  docker logs 358f4a16f8c3
+ 1120  history 
+ 1121  docker run -ti alpine ping 8.8.8.8
+ 1122  docker ps
+ 1123  docker ps -a
+ 1124  docker ps -a -q
+ 1125  docker ps -a 
+ 1126  docker ps 
+ 1127  docker ps -q
+ 1128  docker stop $(docker ps -q)
+ 1129  docker ps 
+ 1130  history 
+ 1131  docker run -d --expose=80 nginx 
+ 1132  docker ps
+ 1133  docker inspect c09d806264c4
+ 1134  docker inspect --format '{{.Name}}' c09d806264c4
+ 1135  docker inspect --format '{{.NetworkSettings.IPAddress}}' c09d806264c4
+ 1136  docker inspect --format '{{.NetworkSettings.IPAddress}}  {{.Name}}' c09d806264c4
+ 1137  docker inspect --format '{{.NetworkSettings.IPAddress}} - {{.Name}}' c09d806264c4
+ 1138  docker inspect --format '{{.NetworkSettings.IPAddress}}-{{.Name}}' c09d806264c4
+ 1139  ifconfig 
+ 1140  docker inspect --format '{{.Id}}-{{.Created}}' c09d806264c4
+ 1141  docker inspect --format '{{.Id}} créé le : {{.Created}}' c09d806264c4
+ 1142  docker inspect --format '{{.state.running}}' c09d806264c4
+ 1143  docker inspect --format '{{.State.unning}}' c09d806264c4
+ 1144  docker inspect --format '{{.State.Running}}' c09d806264c4
+ 1145  docker run --name ping alpine ping 8.8.8.8
+ 1146  docker rm ping
+ 1147  docker run -d --name ping_container alpine ping 8.8.8.8
+ 1148  docker logs ping_container
+ 1149  docker logs -f ping_container
+ 1150  docker exec -it ping_container sh
+ 1151  history 
+ 1152  history > hist.txt
