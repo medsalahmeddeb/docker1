@@ -1,0 +1,1000 @@
+    3  vi chiffres.txt 
+    4  cat chiffres.txt | grep -E "1{3,7}"
+    5  cat chiffres.txt | grep -E "^1{3,7}$"
+    6  cat chiffres.txt | grep -E "(11|zz)"
+    7  cat chiffres.txt | grep -E "^(11|zz)$"
+    8  cat chiffres.txt | grep -E "^[1z]"
+    9  cat chiffres.txt | grep -E "^(1|z)$"
+   10  cat chiffres.txt | grep -E "^[1z]$"
+   11  cat chiffres.txt | grep -E "^[1z]+$"
+   12  cat chiffres.txt | grep -E "[[:space:]]"
+   13  cat chiffres.txt | grep -E "[[:space:]]+"
+   14  vi chiffres.txt 
+   15  cat chiffres.txt | grep -E "[[:space:]]+"
+   16  cat chiffres.txt | grep -E "[[:space:]]*"
+   17  cat chiffres.txt | grep -E "^[1z]"
+   18  cat chiffres.txt | grep -E "^[^1z]"
+   19  man grep
+   20  vi expr.sh
+   21  cat mails.txt 
+   22  chmod +x expr.sh 
+   23  ./expr.sh mails.txt 
+   24  vi expr.sh
+   25  cat chambresHotes.csv 
+   26  man sed
+   27  cat chambresHotes.csv | sed -r ''
+   28  man sed
+   29  cat chambresHotes.csv | sed -r -n ''
+   30  cat chambresHotes.csv | sed -r '4,7d'
+   31  cat chambresHotes.csv | sed -r '4,7p'
+   32  cat chambresHotes.csv | sed -r -n '4,7p'
+   33  cat chambresHotes.csv | sed -r -n '/Arnac/p'
+   34  cat chambresHotes.csv | sed -r -n '/Arnac/d'
+   35  cat chambresHotes.csv | sed -r '/Arnac/d'
+   36  man sed
+   37  cat chambresHotes.csv | sed -r 's/FAUX/False/'
+   38  cat chambresHotes.csv | sed -r 's/FAUX/False/g'
+   39  cat chambresHotes.csv | sed -r 's/FAUX//g'
+   40  cat chambresHotes.csv | sed -r 's/FAUX/False/'
+   41  cat chambresHotes.csv | sed -r 's/FAUX/False/g'
+   42  vi chambresHotes.csv 
+   43  cat chambresHotes.csv | sed -r 's/FAUX/False/g'
+   44  cat chambresHotes.csv | sed -r 's/FAUX/False/gi'
+   45  cat chambresHotes.csv | sed -r '5s/FAUX/False/gi'
+   46  cat chambresHotes.csv | sed -r '5,10s/FAUX/False/gi'
+   47  cat chambresHotes.csv | sed -r '5,+3s/FAUX/False/gi'
+   48  cat chambresHotes.csv | sed -r '5, s/FAUX/False/gi'
+   49  cat chambresHotes.csv | sed -r '5,$ s/FAUX/False/gi'
+   50  cat chambresHotes.csv | sed -r 's/;/|/gi'
+   51  cat chambresHotes.csv | sed -r "s/;/|/gi"
+   52  cat chambresHotes.csv | sed -r s/;/|/gi
+   53  cat chambresHotes.csv | sed -r '5,+3s/(FAUX|VRAI)//gi'
+   54  cat chambresHotes.csv | sed -r 's/(FAUX|VRAI)//gi'
+   55  cat chambresHotes.csv | sed -r -n '5,+3p'
+   56  cat chambresHotes.csv | sed -r '5,$ s/FAUX/\1_copie/gi'
+   57  cat chambresHotes.csv | sed -r 's/FAUX/\1_copie/'   
+   58  cat chambresHotes.csv | sed -r 's/(FAUX)/\1_copie/'   
+   59  cat chambresHotes.csv | sed -r '2,4s/(FAUX)/\1_copie/'  | head -4 
+   60  cat chambresHotes.csv | sed -r '2,4s/(FAUX)/\1_copie/g'  | head -4 
+   61  vi dates_cours.txt
+   62  cat dates_cours.txt | sed -r '^[0-9]'
+   63  cat dates_cours.txt | sed -r '/^[0-9]/'
+   64  cat dates_cours.txt | sed -r '/^[0-9]/p'
+   65  cat dates_cours.txt | sed -r -n '/^[0-9]/p'
+   66  cat dates_cours.txt | sed -r  's/^[0-9].*$/<date>\1</date>/'
+   67  cat dates_cours.txt | sed -r  's/^[0-9].*$/<date>\1<\/date>/'
+   68  cat dates_cours.txt | sed -r  's/^([0-9].*)$/<date>\1<\/date>/'
+   69  cat dates_cours.txt | sed -r  's/^[0-9].*$/<date>&<\/date>/'
+   70  ls
+   71  cat passwd 
+   72  cat passwd | sed 's/bash/csh/'
+   73  cat passwd | sed 's/bash/csh/g'
+   74  cat passwd | sed -r 's/bash/csh/g'
+   75  cat passwd | sed -r 's/bash/csh/g' > passwd_2
+   76  cat passwd_2 
+   77  man sed
+   78  cat passwd | sed -r 's/bash/csh/w passwd_2'
+   79  rm passwd_2 
+   80  cat passwd | sed -r 's/bash/csh/w passwd_2'
+   81  cat passwd_2 
+   82  cat passwd | sed -r -n 's/bash/csh/w passwd_2'
+   83  cat passwd_2 
+   84  cat passwd | sed -r '10,$ s/bash/csh/g'
+   85  cat linux.txt 
+   86  cat linux.txt | sed 's/unix/linux/g'
+   87  cat linux.txt | sed 's/unix/linux/3g'
+   88  cat linux.txt 
+   89  vi linux.txt 
+   90  cat linux.txt | sed 's/unix/linux/3g'
+   91  cat linux.txt 
+   92  cat linux.txt | sed 's/unix/linux/3g'
+   93  cat linux.txt 
+   94  cat linux.txt | sed 's/unix/linux/3g'
+   95  cat linux.txt | sed 's/unix/linux/g'
+   96  sed 's/unix/linux/3g' linux.txt 
+   97  man sed
+   98  cat linux.txt | sed 's/unix/linux/g3'
+   99  cat linux.txt | sed 's/unix/linux/g'
+  100  cat linux.txt | sed 's/^(.)/(\1)/'
+  101  cat linux.txt | sed -r 's/^(.)/(\1)/'
+  102  cat linux.txt | sed 's/^\(.\)/\(\1\)/g'
+  103  cat dates_cours.txt | sed -r -n '/^[0-9]/p'
+  104  cat dates_cours.txt | sed -r -n 's/^[0-9].*$/<date>&<\/date>/'
+  105  cat dates_cours.txt | sed -r  's/^[0-9].*$/<date>&<\/date>/'
+  106  sed 's/unix/linux/3g' linux.txt 
+  107  sed 's/unix/linux/3' linux.txt 
+  108  sed 's/unix/linux/2' linux.txt 
+  109  clear
+  110  cal files
+  111  cat files
+  112  awk 'print $0' files
+  113  awk '{print $0}' files
+  114  awk '{print $1}' files
+  115  awk '{print $9}' files
+  116  awk '{print $NF}' files
+  117  awk '{print $1 $9}' files
+  118  awk '{print $1,$9}' files
+  119  awk '{print $1,$6,$9}' files
+  120  awk '{print "$1-$6-$9"}' files
+  121  awk '{print $1 "-" $6 "-" $9}' files
+  122  awk '{print $1 ":" $6 "-" $9}' files
+  123  awk '{print $1 ":" $6 ":" $9}' files
+  124  awk '{print $1 ":" $6 " : " $9}' files
+  125  awk '{print $1 ":" $6 "\t: " $9}' files
+  126  awk '{print $1 ":" $6 "\t\t: " $9}' files
+  127  cat chambresHotes.csv 
+  128  awk -F ";" '{print $1 ":" $6 "\t\t: " $9}' 
+  129  awk -F ";" '{print $1 ":" $6 "\t\t: " $9}' chambresHotes.csv 
+  130  awk -F ";" '{print $1 ":" $2 "\t\t: " $4}' chambresHotes.csv 
+  131  awk -F ";" '{print $1 ":" $2 ": " $4}' chambresHotes.csv 
+  132  echo "Bonjour la classe" | awk '{ $1="Hello" ; print $0  }'
+  133  cat chambresHotes.csv | awk -F ";" '{ $1="x" ; print $0  }'
+  134  cat files 
+  135  awk '/nov/{print $0}'
+  136  awk '/nov/{print $0}' files 
+  137  awk '$2 == 4 {print $0}' files 
+  138  awk '$2 == 6 {print $0}' files 
+  139  awk '  NR == 5   {print $0}' files 
+  140  awk '  NR == 5 , NR==10  {print $0}' files 
+  141  cat adresse
+  142  cat adresse.txt 
+  143  awk $3 == 56100 {print }
+  144  awk '$3 == 56100 {print }' adresse.txt 
+  145  awk '$3 == 56100 {print $0}' adresse.txt 
+  146  awk '$3 ~ 56100 {print $0}' adresse.txt 
+  147  awk '$3 ~ /56100/ {print $0}' adresse.txt 
+  148  awk  -F "|"   '$3 ~ /56100/ {print $0}' adresse.txt 
+  149  awk  -F "|"   '$3 == 56100 {print $0}' adresse.txt 
+  150  awk  -F "|"   '$3 ~ /^56/ {print $0}' adresse.txt 
+  151  vi adresse.txt 
+  152  awk  -F "|"   '$3 ~ /^56/ {print $0}' adresse.txt 
+  153  awk  -F "|"   '$3 !~ /^56/ {print $0}' adresse.txt 
+  154  awk  -F "|"   '$3 ~ /100$/ {print $0}' adresse.txt 
+  155  file /etc
+  156  file /etc/passwd
+  157  file /etc/*
+  158  file /etc/* | grep text
+  159  file /etc/* | grep text | awk '{ print $0}'
+  160  file /etc/* | grep text | awk '{ print $1}'
+  161  file /etc/* | grep text | awk '{ print $1}' | sed 's/:$//'
+  162  file /etc/* 
+  163  file /etc/* | grep text 
+  164  file /etc/* | grep text | awk '{ print $1}' 
+  165  file /etc/* | grep text | awk '{ print $1}' | sed 's/:$//'
+  166  ls -l
+  167  ls -la ~ | awk ''
+  168  ls -la ~ 
+  169  ls -la ~ | awk '{print $0}'
+  170  ls -la ~ | awk ' $9 ~  /^\./   {print $0}'
+  171  ls -la ~ | awk ' $9 ~  /^\.[^.]/   {print $0}'
+  172  ps -aef
+  173  ps -aef | head -8
+  174  ps -aef | awk ' NR=1 , NR=8  {print}'
+  175  ps -aef | awk ' NR==1 , NR==8  {print}'
+  176  ps -aef | awk ' {print $1,$8}'
+  177  ps -aef | awk ' {print $1 $8}'
+  178  ps -aef | awk ' {print $1,$8}'
+  179  ps -aef | awk ' {print $1 " --- "  $8}'
+  180  ps -aef | awk ' {print "Utilisateur :" $1 " CMD : "  $8}'
+  181  awk -F "|" '{  print "Le numéro de ligne : " NR "\tClient : " $1 }' adresse.txt 
+  182  cat adresse.txt 
+  183  awk -F "|" '/[/]/   {print $0}' adresse.txt 
+  184  awk -F "|" ' $3 ~ /^56/ {print} '
+  185  awk -F "|" ' $3 ~ /^56/ {print} ' adresse.txt 
+  186  awk -F "|" ' $3 !~ /^56/ {print} ' adresse.txt 
+  187  awk -F "|" ' NR == 1 || NR ==4  {print $1 " - " $5}
+  188  awk -F "|" ' NR == 1 || NR ==4  {print $1 " - " $5}' adresse.txt 
+  189  awk -F "|" ' NR == 1 , NR ==4  {print $1 " - " $5}' adresse.txt 
+  190  awk -F "|" ' NR == 1 && NR ==4  {print $1 " - " $5}' adresse.txt 
+  191  awk -F "|" ' $3 ~ /^56/ && $5 ~ /^78/  {print $1 " - " $5}' adresse.txt 
+  192  cat adresse.txt 
+  193  awk -F "|" ' $3 ~ /^56/ && $5 ~ /^85/  {print $1 " - " $5}' adresse.txt 
+  194  vi script1.awk
+  195  awk -f script1.awk adresse.txt 
+  196  vi script1.awk
+  197  awk -f script1.awk adresse.txt 
+  198  vi script1.awk
+  199  awk -f script1.awk adresse.txt 
+  200  vi script1.awk
+  201  awk -f script1.awk adresse.txt 
+  202  vi adresse.txt 
+  203  awk -f script1.awk adresse.txt 
+  204  vi adresse.txt 
+  205  awk -f script1.awk adresse.txt 
+  206  vi script2.awk 
+  207  awk -f script2.awk adresse.txt 
+  208  vi script2.awk 
+  209  awk -f script2.awk adresse.txt 
+  210  vi script3.awk
+  211  awk -f script3.awk adresse.txt 
+  212  wc -l  adresse.txt 
+  213  vi script3.awk
+  214  wc -l  adresse.txt 
+  215  awk -f script3.awk adresse.txt 
+  216  man awk
+  217  awk -f script3.awk
+  218  ls
+  219  tail -f
+  220  tail -l
+  221  ls -l
+  222  ls -l | sort +8 -9
+  223  ls -l | sort +8 -9 +4n -5
+  224  ls -l | sort  +4n -5
+  225  man sort
+  226  ls -l | sort  +4nr -5
+  227  cut -d: -f1,3 /etc/passwd
+  228  read -p "Donnez des valeurs "
+  229  read -p "Donnez des valeurs " a b c
+  230  echo $a
+  231  echo $b
+  232  echo $c
+  233  IFS="-"
+  234  read -p "Donnez des valeurs " a b c
+  235  echo $c
+  236  echo $a
+  237  read -p "Donnez des valeurs " a b c
+  238  echo $a
+  239  du -h
+  240  du -hs
+  241  du -hs /etc
+  242  du -hs /home/formation/
+  243  du -h /home/formation/
+  244  du -h 
+  245  du -hs /tmp
+  246  du -hs rep22
+  247  mail=med@gmail.com
+  248  expr "$mail" : '[a-zA-Z].*@[a-zA-Z].*\.[a-zA-Z]\{2,\4}'
+  249  expr "$mail" : '[a-zA-Z].*@[a-zA-Z].*\.[a-zA-Z]\{2,4\}'
+  250  mail=med.gmail
+  251  expr "$mail" : '[a-zA-Z].*@[a-zA-Z].*\.[a-zA-Z]\{2,4\}'
+  252  cd scripts
+  253  ls
+  254  vi clients.csv
+  255  vi agences.csv
+  256  vi clients.csv
+  257  vi bd.sh 
+  258  chmod +x bd.sh 
+  259  ./bd.sh 
+  260  vi bd.sh 
+  261  ./bd.sh 
+  262  vi bd.sh 
+  263  ./bd.sh 
+  264  vi bd.sh 
+  265  ./bd.sh 
+  266  vi bd.sh 
+  267  ./bd.sh 
+  268  vi bd.sh 
+  269  ./bd.sh 
+  270  vi bd.sh 
+  271  ./bd.sh 
+  272  vi bd.sh 
+  273  car erreurs_ajout.log 
+  274  vi bd.sh 
+  275  car erreurs_ajout.log 
+  276  cat erreurs_ajout.log 
+  277  vi bd.sh 
+  278  ./bd.sh 
+  279  cat erreurs_ajout.log 
+  280  vi erreurs_ajout.log 
+  281  cat erreurs_ajout.log 
+  282  ./bd.sh 
+  283  cat erreurs_ajout.log 
+  284  vi erreurs_ajout.log 
+  285  vi bd.sh 
+  286  date "+%M"
+  287  date "+%d"
+  288  date "+%d/%m/%y"
+  289  date "+%d/%m/%Y"
+  290  date "+%d/%m/%Y à "
+  291  date "+%d/%m/%Y à %H:%M"
+  292  vi bd.sh 
+  293  ./bd.sh 
+  294  vi bd.sh 
+  295  ./bd.sh 
+  296  vi bd.sh 
+  297  ./bd.sh 
+  298  cat source.sql 
+  299  ./bd.sh 
+  300  cat source.sql 
+  301  vi bd.sh 
+  302  cat source.sql 
+  303  ./bd.sh 
+  304  cat source.sql 
+  305  vi bd.sh 
+  306  ./bd.sh 
+  307  cat source.sql 
+  308  ./bd.sh 
+  309  vi bd.sh 
+  310  vi init_session.sh
+  311  chmod +x init_session.sh 
+  312  ./init_session.sh 
+  313  ./init_session.sh formation
+  314  ./init_session.sh formation1
+  315  vi init_session.sh
+  316  chmod +x init_session.sh 
+  317  ./init_session.sh user1 https://github.com/medsalahmeddeb/AppWebJava AppWebJava
+  318  sudo ./init_session.sh user1 https://github.com/medsalahmeddeb/AppWebJava AppWebJava
+  319  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  320  ls
+  321  ls AppWebJava/
+  322  vi init_session.sh
+  323  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  324  ls /home
+  325  vi init_session.sh
+  326  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  327   /home/user1/
+  328  vi init_session.sh
+  329  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  330  cat /home/user1/.bashrc
+  331  sudo cat /home/user1/.bashrc
+  332  vi init_session.sh
+  333  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  334  sudo cat /home/user1/.bashrc
+  335  vi init_session.sh
+  336  sudo ls -a /home/user1/
+  337  sudo ls -a /home/user1/.bashrc
+  338  sudo cat /home/user1/.bashrc
+  339  vi init_session.sh
+  340  man userdel 
+  341  userdel -r user1
+  342  sudo userdel -r user1
+  343  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  344  ls
+  345  ls /home/user1/
+  346  sudo ls -l /home/user1/
+  347  sudo ls -la /home/user1/
+  348  sudo cat /home/user1/.bashrc
+  349  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  350  sudo cat /home/user1/.bashrc
+  351  sudo ls -la /home/user1/
+  352  vi init_session.sh
+  353  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  354  vi init_session.sh
+  355  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  356  vi init_session.sh
+  357  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 1
+  358  vi init_session.sh
+  359  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  360  man yum
+  361  vi init_session.sh
+  362  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  363  vi init_session.sh
+  364  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  365  vi init_session.sh
+  366  sudo ./init_session.sh user1 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  367  sudo ./init_session.sh user2 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  368  vi init_session.sh
+  369  sudo ./init_session.sh user2 AppWebJava https://github.com/medsalahmeddeb/AppWebJava 
+  370  vi init_session.sh
+  371  pwd
+  372  cd files/
+  373  vi adresse.txt 
+  374  git
+  375  echo $?
+  376  sudo yum remove git
+  377  git
+  378  echo $?
+  379  sudo yum remove git
+  380  ifconfig 
+  381  sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+  382  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+  383  sudo yum install docker-ce
+  384  sudo systemctl start docker
+  385  sudo systemctl status docker
+  386  sudo systemctl enable docker
+  387  docker info
+  388  sudo docker info
+  389  sudo systemctl status docker
+  390  sudo docker info
+  391  top
+  392  sudo docker info
+  393  docker run hello-world
+  394  sudo docker run hello-world
+  395  history 
+  396  vi /etc/group
+  397  usermod -aG formation docker
+  398  usermod -aG docker formation 
+  399  sudo usermod -aG docker formation 
+  400  docker info
+  401  docker search ubuntu
+  402  docker search jenkins
+  403  docker info
+  404  docker pull nginx
+  405  docker pull nginx:1.14.0
+  406  docker search jenkins
+  407  docker images 
+  408  docker pull --all-tags nginx
+  409  ls /var/lib/docker/
+  410  sudo ls /var/lib/docker
+  411  sudo ls /var/lib/docker/image$
+  412  sudo ls /var/lib/docker/image
+  413  sudo ls /var/lib/docker/image/overlay2
+  414  sudo ls /var/lib/docker/image/overlay2/imagedb
+  415  docker images$
+  416  docker images
+  417  sudo ls /var/lib/docker/image/overlay2/imagedb
+  418  sudo ls /var/lib/docker/image/overlay2/imagedb/content
+  419  sudo ls /var/lib/docker/image/overlay2/imagedb/content/sha*
+  420  sudo ls /var/lib/docker/image/overlay2/imagedb/content/sha256
+  421  sudo ls /var/lib/docker/image/overlay2/imagedb/content/sha256/ecc98fc2f376d6560311b66d6958e4350a5a485ee07aa2d1235842d0bce440da
+  422  sudo ls -l /var/lib/docker/image/overlay2/imagedb/content/sha256/ecc98fc2f376d6560311b66d6958e4350a5a485ee07aa2d1235842d0bce440da
+  423  docker images
+  424  docker images --filter "before=nginx"
+  425  docker images --filter "before=hello-world"
+  426  docker images
+  427  docker run nginx
+  428  docker ps -a
+  429  docker run   -i -t   centos:7 
+  430  docker run   -i -t   centos:7
+  431  docker ps
+  432  docker ps -a 
+  433  docker run   -i -t   centos:7
+  434  docker run -d centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+  435  docker ps
+  436  docker logs 45b7abe9005d
+  437  docker logs -f  45b7abe9005d
+  438  docker logs -f -t 45b7abe9005d
+  439  docker ps
+  440  docker stop cool_jemison
+  441  docker ps
+  442  docker ps -a
+  443  docker run -d centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+  444  docker ps
+  445  docker ps -q
+  446  docker stop 8be43e9d93e1 34470d345518 ed7504914d51
+  447  docker run -d centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+  448  docker ps -q
+  449  docker stop $(docker ps -q)
+  450  history 
+  451  docker ps -a
+  452  docker rm 038f95266fe9
+  453  docker run -d centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+  454  docker ps 
+  455  docker rm 3e58281e0005
+  456  docker rm -f 3e58281e0005
+  457  docker rm $(docker ps -aq)
+  458  docker ps -a
+  459  cd /var/lib/docker/
+  460  ls
+  461  sudo ls
+  462  sudo ls containers
+  463  docker run -d     --restart=always     centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+  464  docker run -d        centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+  465  docker ps
+  466  sudo systemctl restart docker.service 
+  467  docker ps
+  468  docker ps -a
+  469  docker rm -f 5d619ae13380 9d718734e117
+  470  docker run -d --name c1 centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+  471  docker run -d --name c2 centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+  472  docker ps
+  473  sudo systemctl restart docker.service 
+  474  docker ps
+  475  docker ps -a
+  476  docker run -d --name c3  --restart=always  centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+  477  docker ps -a
+  478  sudo systemctl restart docker.service 
+  479  docker ps -a
+  480  docker stop c3
+  481  docker ps -a
+  482  docker run -d ngix
+  483  docker run -d nginx
+  484  docker ps
+  485  docker inspect a40a0fdba185
+  486  firefox &
+  487  docker ps
+  488  docker exec -it a40a0fdba185 bash
+  489  docker ps
+  490  docker top c1
+  491  docker top a40a0fdba185
+  492  docker run -d --name c4 centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 ; sleep 1 ; done" 
+  493  docker top 
+  494  docker run -d --name c5 centos:7 /bin/bash -c "while [ 1 ] ; do echo hello from centos 7 > /file; sleep 1 ; done" 
+  495  docker stats 
+  496  docker inspect c5
+  497  cd
+  498  docker container run alpine echo hello
+  499  $
+  500  docker ps
+  501  docker ps -a
+  502  docker run alpine 
+  503  docker ps -a
+  504  docker images
+  505  docker run -it alpine sh
+  506  docker run -it --name=test1 alpine:latest date
+  507  docker run -it --name=test2 alpine:latest date
+  508  docker run -it --name=test1   --rm    alpine:latest date
+  509  docker run -it --name=test3   --rm    alpine:latest date
+  510  docker ps -a
+  511  docker run -it --name=test3   --rm    alpine:latest date
+  512  docker run -it alpine
+  513  docker run alpine ping 8.8.8.8
+  514  docker run -ti alpine ping 8.8.8.8
+  515  docker ps
+  516  docker run -d alpine ping 8.8.8.8
+  517  docker ps
+  518  docker logs 358f4a16f8c3
+  519  history 
+  520  docker run -ti alpine ping 8.8.8.8
+  521  docker ps
+  522  docker ps -a
+  523  docker ps -a -q
+  524  docker ps -a 
+  525  docker ps 
+  526  docker ps -q
+  527  docker stop $(docker ps -q)
+  528  docker ps 
+  529  history 
+  530  docker run -d --expose=80 nginx 
+  531  docker ps
+  532  docker inspect c09d806264c4
+  533  docker inspect --format '{{.Name}}' c09d806264c4
+  534  docker inspect --format '{{.NetworkSettings.IPAddress}}' c09d806264c4
+  535  docker inspect --format '{{.NetworkSettings.IPAddress}}  {{.Name}}' c09d806264c4
+  536  docker inspect --format '{{.NetworkSettings.IPAddress}} - {{.Name}}' c09d806264c4
+  537  docker inspect --format '{{.NetworkSettings.IPAddress}}-{{.Name}}' c09d806264c4
+  538  ifconfig 
+  539  docker inspect --format '{{.Id}}-{{.Created}}' c09d806264c4
+  540  docker inspect --format '{{.Id}} créé le : {{.Created}}' c09d806264c4
+  541  docker inspect --format '{{.state.running}}' c09d806264c4
+  542  docker inspect --format '{{.State.unning}}' c09d806264c4
+  543  docker inspect --format '{{.State.Running}}' c09d806264c4
+  544  docker run --name ping alpine ping 8.8.8.8
+  545  docker rm ping
+  546  docker run -d --name ping_container alpine ping 8.8.8.8
+  547  docker logs ping_container
+  548  docker logs -f ping_container
+  549  docker exec -it ping_container sh
+  550  history 
+  551  history > hist.txt
+  552  ls
+  553  sudo poweroff 
+  554  docker ps
+  555  docker ps -a
+  556  docker ps -
+  557  docker ps 
+  558  docker ps -a
+  559  docker ps -a -q
+  560  history 
+  561  docker run --help
+  562  docker logs --help
+  563  docker run -d --name ping_container1 alpine ping 8.8.8.8
+  564  docker logs ping_container1
+  565  docker logs -t ping_container1
+  566  docker exec -it ping_container1 sh
+  567  docker ps
+  568  docker ps -a
+  569  docker ps -a a
+  570  docker ps 
+  571  docker stop 8fc70bcff010 2c7477d43b81
+  572  docker ps 
+  573  docker ps -a
+  574  docker rm 2c7477d43b81 c486f424a796  c09d806264c4
+  575  docker ps -a
+  576  docker rm $( docker ps -a -q  )
+  577  docker ps -a
+  578  docker run -d --name ping_container1 alpine ping 8.8.8.8
+  579  docker run -d --name ping_container2 alpine ping 8.8.8.8
+  580  docker rm -f $( docker ps -a  )
+  581  docker ps -a
+  582  docker run --name webServer -it ubuntu:18.04
+  583  docker login
+  584  docker run -it --name alpine
+  585  docker run -it --name container_alpine alpine
+  586  docker commit -a "MEDDEB" -m "Image alpine avec CURL" container_alpine meddeb/alpine-curl:1.0
+  587  docker images
+  588  docker push meddeb/alpine-curl:1.0
+  589  docker run -it meddeb/alpine-curl:1.0
+  590  docker history meddeb/alpine-curl:1.0
+  591  docker inspect meddeb/alpine-curl:1.0
+  592  docker images
+  593  docker rmi hello-world
+  594  docker images
+  595  docker save --output=ubuntu_image.tar ubuntu:18.04 
+  596  ls
+  597  du -h ubuntu_image.tar 
+  598  docker ps
+  599  docker ps -a
+  600  docker export container_alpine > container_alpine.tar
+  601  ll
+  602  du -h container_alpine.tar 
+  603  cat container_alpine.tar | docker import - ubuntu
+  604  docker images
+  605  docker rmi ubuntu:18.04 
+  606  docker rm e602ec49d44d
+  607  docker rmi ubuntu:18.04 
+  608  cat ubuntu_image.tar | docker import - ubuntu:18.04
+  609  docker images
+  610  docker rmi ubuntu
+  611  docker import ubuntu_image.tar ubuntu:18.04.2
+  612  docker images
+  613  mdkir Dockerfiles
+  614  cd Documents/
+  615  mkdir dockerfiles
+  616  cd dockerfiles/
+  617  mkdir exemple1
+  618  cd exemple1/
+  619  vi Dockerfile
+  620  docker build .
+  621  docker images
+  622  docker run c2b394410098
+  623  vi Dockerfile
+  624  docker build .
+  625  docker images
+  626  docker run 935a8b677aca
+  627  ls
+  628  mv Dockerfile Dockerfile1 
+  629  docker build .
+  630  mv Dockerfile1 Dockerfile
+  631  docker build    -t meddeb/centos:date     .
+  632  docker images
+  633  docker run meddeb/centos:date
+  634  vi 
+  635  cd .
+  636  cd ..
+  637  cd exeple_pache
+  638  mkdir exmeple_apache
+  639  cd exmeple_apache/
+  640  vi dockerfile_apache
+  641  docker build -t apache:2 .
+  642  ls
+  643  docker build -t apache:2 -f dockerfile_apache .
+  644  vi dockerfile_apache
+  645  docker build -t apache:2 -f dockerfile_apache .
+  646  docker images
+  647  docker run -d --name webserv11 apache:2
+  648  docker inspect webserv11
+  649  docker ps
+  650  cat dockerfile_apache 
+  651  docker image
+  652  docker images
+  653  docker run -d --name webserv11 apache:2
+  654  vi dockerfile_apache 
+  655  cat dockerfile_apache 
+  656  docker images
+  657  docker rmi ubuntu:18.04.2 
+  658  docker pull uubuntu
+  659  docker pull ubuntu
+  660  cd ..
+  661  mkdir lab3_ex1
+  662  cd lab3_ex1/
+  663  vi Dockerfile
+  664  docker images
+  665  cat Dockerfile 
+  666  wq
+  667  docker build -t meddeb/ubuntu:git .
+  668  cd ..
+  669  mkdir lab3_ex2_1
+  670  cd lab3_ex2_1/
+  671  vi Dockerfile_v1
+  672  docker build -t ping:1.0 -f Dockerfile_v1 .
+  673  docker run --name c_ping1 ping:1.0 
+  674  cat Dockerfile_v1 
+  675  ping
+  676  docker ps -a
+  677  docker run  ping:2
+  678  docker run  ping:1.0  bash
+  679  ping 8.8.8.8
+  680  ping 8.8.8.8 -c1
+  681  cp Dockerfile_v1 Dockerfile_v2
+  682  vi Dockerfile_v2
+  683  docker build -t ping:2.0 -f Dockerfile_v2 .
+  684  docker run  ping:2.0 
+  685  docker run  ping:2.0   8.8.8.8  -c3
+  686  cat Dockerfile_v2 
+  687  cat Dockerfile_v1
+  688  docker run  ping:1.0 
+  689  docker run  ping:1.0 8.8.8.8 -c1
+  690  cat Dockerfile_v2 
+  691  docker run  ping:2.0 
+  692  docker run  ping:2.0 8.8.8.8
+  693  docker run cetnos:7 
+  694  docker run centos:7 
+  695  docker run centos:7 date
+  696  docker run  ping:2.0 ping 8.8.8.8
+  697  cp Dockerfile_v1 Dockerfile_v2
+  698  cp Dockerfile_v1 Dockerfile_v3
+  699  vi Dockerfile_v3
+  700  docker build -t ping:3.0 -f Dockerfile_v3 .
+  701  docker run  ping:3.0 
+  702  docker run  ping:3.0 8.8.8.8
+  703  cat Dockerfile_v3 
+  704  docker images
+  705  docker build -t ping:entry_cmd -f Dockerfile_v3 .
+  706  docker images
+  707  history 
+  708  cd ..
+  709  mkdir lab3_ex3
+  710  cd lab3_ex3
+  711  ls
+  712  vi pong.js
+  713  vi package.json
+  714  tree
+  715  vi Dockerfile
+  716  cat Dockerfile 
+  717  docker build -t Pong:v1.0 .
+  718  docker build -t pong:v1.0 .
+  719  docker run -d pong:v1.0 
+  720  docker ps
+  721  docker inspect b58010d2b325
+  722  curl 172.17.0.4/ping
+  723  curl 172.17.0.4/echo
+  724  cat Dockerfile 
+  725  docker ps
+  726  cds ..
+  727  cd ..
+  728  mkdir lab3_ex5
+  729  cd lab3_ex5
+  730  git clone https://github.com/medsalahmeddeb/docker
+  731  cd docker/
+  732  ls
+  733  cd WebApp/
+  734  ls
+  735  vi Dockerfile
+  736  docker build -t ebapp
+  737  docker build -t Webapp .
+  738  docker build -t webapp .
+  739  docker images
+  740  vi Dockerfile
+  741  docker build -t webapp .
+  742  docker images
+  743  docker run -d webapp
+  744  docker inspect d0a662f
+  745  vi Dockerfile
+  746  cat Dockerfile 
+  747  ls
+  748  cd ..
+  749  ls
+  750  mkdir java
+  751  cd java/
+  752  vi Dockerfile
+  753  ls
+  754  cp /home/formation/CalculatorSampleApp-0.0.1-SNAPSHOT.war ./AppWebJava.war
+  755  *
+  756  ls
+  757  cat Dockerfile 
+  758  docker build -t appwebjava .
+  759  docker run -d appwebjava
+  760  docker ps
+  761  docker inspect aa77077e13be
+  762  docker run -d meddeb/appwebjava:2.0.0
+  763  docker ps
+  764  docker ps
+  765  docker  inspect webServer 
+  766  firefox &
+  767  df -h
+  768  docker ps
+  769  docker run --name ping11 alpine ping 8.8.8.8
+  770  docker run --name ping11 -d alpine ping 8.8.8.8
+  771  docker run --name ping12 -d alpine ping 8.8.8.8
+  772  df -h
+  773  ls /var/lib/docker/overlay2/2f14891548850dee20c9ad56c6774806716be02bb68587708df2eb94bce71e14/merged
+  774  docker images
+  775  ls
+  776  find 
+  777  cd Documents/dockerfiles/
+  778  ls
+  779  cd lab3_ex5/
+  780  ls
+  781  cd docker/
+  782  ls
+  783  cd PythonScript/
+  784  ls
+  785  vi Dockerfile
+  786  docker build -t linkextractor .
+  787  docker run linkextractor
+  788  docker run linkextractor http://example.com/
+  789  docker run linkextractor https://lms.gklearn.online/fr/login/index.php
+  790  ls
+  791  cat Dockerfile 
+  792  docker ps
+  793  docker inspect a391540d2aaf
+  794  docker ps
+  795  docker inspect  4c0dcae16d45
+  796  ip a s
+  797  docker ps
+  798  docker inspect cnginx 
+  799  firefox &
+  800  ifconfig 
+  801  docker run -d --name servWebNginx3   -p 8000:80    nginx
+  802  cd /var/lib/docker/
+  803  ls
+  804  su -
+  805  ifconfig 
+  806  docker run -d --name cnginx nginx
+  807  docker ps
+  808  ifconfig 
+  809  ip a s
+  810  docker run -it --name centos --net=container:cnginx centos:7 bash
+  811  docker run -it --name centos2  centos:7 bash
+  812  ip a s
+  813  brctl show docker0
+  814  iptables -t nat -L -n
+  815  sudo iptables -t nat -L -n
+  816  docker ps
+  817  docker attach a391540d2aaf
+  818  ip a s
+  819  docker inspect centos
+  820  docker ps
+  821  docker start centos 
+  822  docker ps
+  823  docker inspect 780c0655ec02
+  824  docker inspect centos
+  825  docker run -d --name servWebNginx --publish-all nginx
+  826  docker ps 
+  827  docker stop 780c0655ec02 a391540d2aaf
+  828  docker ps
+  829  docker run -d --name servWebNginx2   -p 8000:80    nginx
+  830  docker run -d --name servWebhttpd   -p 80:80  httpd
+  831  docker ps
+  832  docker inspect 07a2d269c8fb
+  833  docker run -it -v /data1 --name cdata1 centos:7 bash 
+  834  docker rm 2a8
+  835  docker ps -a
+  836  docker stop $(docker ps -q)
+  837  docker rm $(docker ps -aq)
+  838  pwd
+  839  ls
+  840  cp -r  Documents/dockerfiles/lab3_ex5/docker/WebApp/ .
+  841  ls
+  842  ls WebApp/
+  843  cd WebApp/
+  844  rm Dockerfile 
+  845  ls
+  846  docker run  --name serverHTTPD -d -p 80:80 -v /home/formation/WebApp/:/var/www/html httpd
+  847  docker ps 
+  848  docker exec -it serverHTTPD bash
+  849  docker run  --name serverHTTPD1 -d -p 80:80 -v /home/formation/WebApp/:/usr/local/apache2/htdocs httpd
+  850  docker stop  serverHTTPD1 serverHTTPD
+  851  docker run  --name serverHTTPD -d -p 80:80 -v /home/formation/WebApp/:/usr/local/apache2/htdocs httpd
+  852  docker stop  serverHTTPD1 serverHTTPD
+  853  docker rm  serverHTTPD1 serverHTTPD
+  854  docker run  --name serverHTTPD -d -p 80:80 -v /home/formation/WebApp/:/usr/local/apache2/htdocs httpd
+  855  docker ps
+  856  docker run --name mysql -e MYSQL_ROOT_PASSWORD=pass123 --expose 3306 -d mysql
+  857  docker run -d --name wordpress --link mysql:mysql -p 8080:80 wordpress
+  858  docker ps
+  859  docker pull jenkins:2.60.3
+  860  docker run --name testAppNode -p 8081:80  -d  httpd
+  861  docker ps
+  862  docker run --name serverCI-Cd --publish 8082:8080 --publish 50000:50000 -v /home/formation/workspace:/var/lib/jenkins/workspace/ jenkins:2.60.3 
+  863  ifconfig 
+  864  mkdir volume
+  865  cd volume/
+  866  vi Dockerfile
+  867  docker build -t imgvol .
+  868  docker image
+  869  docker images
+  870  docker run -it --name c2 imgvol
+  871  ls
+  872  cat Dockerfile 
+  873  docker rm -f c2
+  874  docker rmi imgvol:latest 
+  875  vi Dockerfile 
+  876  docker build -t imgvol .
+  877  docker run -it --name c2 imgvol
+  878  docker inspect c2
+  879  ls /var/lib/docker/volumes/17e4fdfbbf56b798397b62438f21afb5af3feb7d5ea564b3bbd79d315bd33025/_data
+  880  cat /var/lib/docker/volumes/17e4fdfbbf56b798397b62438f21afb5af3feb7d5ea564b3bbd79d315bd33025/_data/hello.txt 
+  881  docker run -d  --name c3 -v /tmp/data:/data alpine  sh -c 'ping 8.8.8.8 >> /data/ping.txt'
+  882  docker ps
+  883  ls /tmp/data/
+  884  tail -f /tmp/data/ping.txt 
+  885  cd docker-compose/
+  886  cd example-voting-app/
+  887  docker-compose ps
+  888  cd ..
+  889  mkdir exemple3
+  890  cd exemple3/
+  891  git clone 
+  892  git clone https://github.com/medsalahmeddeb/docker-compose-node-mango
+  893  cd docker-compose-node-mango/
+  894  tree
+  895  vi Dockerfile
+  896  ls
+  897  vi Dockerfile
+  898  vi docker-compose.yaml
+  899  mkdir files
+  900  mv Dockerfile files
+  901  vi docker-compose.yaml
+  902  docker ps
+  903  exit
+  904  docker ps
+  905  docker-compose ps
+  906  cd docker-compose/
+  907  ls
+  908  cd composetest/
+  909  docker-compose ps
+  910  cat Dockerfile 
+  911  docker ps
+  912  docker-compose down
+  913  cd ..
+  914  cd example-voting-app/
+  915  docker-compose ps
+  916  cd ..
+  917  cd docker-compose/
+  918  git clone https://github.com/medsalahmeddeb/docker-compose-node-mango
+  919  cd docker-compose-node-mango/
+  920  vi Dockerfile
+  921  vi docker-compose.yml
+  922  docker-compose pull ; docker-compose build
+  923  docker-compose up
+  924  docker-compose 
+  925  docker-compose ps
+  926  docker-compose up -d
+  927  tree
+  928  cat docker-compose.yml 
+  929  su 
+  930  pwd
+  931  docker-compose down
+  932  su 
+  933  cd ..
+  934  mkdir wordpress
+  935  vi docker-compose.yml
+  936  docker-compose pull
+  937  vi docker-compose.yml 
+  938  vi docker-compose.yml
+  939  docker-compose up -d
+  940  docker-compose ps
+  941  vi docker-compose.yml
+  942  cd ..
+  943  cd docker-compose/
+  944  mkdir wordpresse_2
+  945  cd wordpress
+  946  cd ..
+  947  cd wordpresse_2/
+  948  vi docker-compose.yml
+  949  docker-compose up
+  950  exit
+  951  docker ps
+  952  docker rm -f $(docker ps -aq)
+  953  docker images
+  954  df -h
+  955  sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  956  ll /usr/local/bin/docker-compose
+  957  vi /usr/local/bin/docker-compose
+  958  sudo chmod +x /usr/local/bin/docker-compose
+  959  docker-compose --version
+  960  mkdir docker-compose
+  961  cd docker-compose/
+  962  mkdir ex1
+  963  cd ex1/
+  964  vi docker-compose.yml
+  965  docker-compose up
+  966  cd ..
+  967  mkdir composetest
+  968  cd composetest/
+  969  vi app.py
+  970  vi requirements.txt
+  971  ls
+  972  vi Dockerfile
+  973  vi docker-compose.yml
+  974  cat docker-compose.yml 
+  975  docker-compose pull
+  976  docker-compose build
+  977  docker-compose up
+  978  docker-compose down
+  979  docker-compose -d up
+  980  docker-compose - up
+  981  docker-compose  up -d
+  982  docker-compose ps
+  983  docker-compose down
+  984  vi docker-compose.yml 
+  985  docker-compose  up -d
+  986  docker-compose  down
+  987  docker-compose  up -d
+  988  cat docker-compose.yml 
+  989  vi app.py 
+  990  vi docker-compose.yml 
+  991  ls
+  992  vi app.py 
+  993  cd ..
+  994  git clone https://github.com/dockersamples/example-voting-app
+  995  cd  example-voting-app/
+  996  ls
+  997  docker-compose -f docker-compose-simple.yml up
+  998  cd ..
+  999  mkdir wordpress_2
+ 1000  exit
+ 1001  history > hist_18_aout
+ 1002  history > hist_18.txt
